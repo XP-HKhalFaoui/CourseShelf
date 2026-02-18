@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseShelf</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-left">
+        <h1>📚 CourseShelf</h1>
+        <span class="subtitle">Offline SCORM Library</span>
+      </div>
+      <div class="header-actions">
+        <button id="btn-add-zip" class="btn btn-primary">
+          ➕ Add Course (ZIP)
+        </button>
+        <button id="btn-open-folder" class="btn btn-secondary">
+          📂 Open Folder
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div id="progress-bar" class="progress-bar" style="display: none">
+        <span id="progress-text">Importing...</span>
+      </div>
+      <div id="course-grid" class="course-grid"></div>
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">📖</div>
+        <h2>No courses yet</h2>
+        <p>Click <strong>➕ Add Course (ZIP)</strong> to import a SCORM package.</p>
+      </div>
+    </main>
+
+    <script type="module" src="./renderer.ts"></script>
+  </body>
+</html>
